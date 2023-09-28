@@ -9,7 +9,12 @@
 <body>
 	<h1>Criar novo contato</h1>
 	<form name="frmContato" action="insert">
+
 		<table>
+			<tr>
+				<td><input type="text" name="nome" placeholder="Nome"
+					class="Caixa1"></td>
+			</tr>
 			<tr>
 				<td><input type="text" name="nome" placeholder="Nome"
 					class="Caixa1"></td>
@@ -24,8 +29,10 @@
 			</tr>
 		</table>
 		
-		<input type="button" value="Adicionar" class="Botao1" onclick="validar()">
-		
+		<a href="main" class="Botao1">Voltar</a>
+		<input type="button" value="Adicionar" class="Botao1"
+			onclick="validar()">
+
 	</form>
 	<script src="scripts/validador.js"></script>
 </body>

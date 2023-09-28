@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.DAO;
 import model.JavaBeans;
 
-@WebServlet(urlPatterns = { "/Controller", "/main", "/insert" })
+@WebServlet(urlPatterns = { "/Controller", "/main", "/insert", "/select" })
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	DAO dao = new DAO();
@@ -30,12 +30,12 @@ public class Controller extends HttpServlet {
 			contatos(request, response);
 		} else if (action.equals("/insert")) {
 			novoContato(request, response);
-			/**
-			 * teste de recebimento dos dados do formulario
-			 * System.out.println(request.getParameter("nome"));
-			 * System.out.println(request.getParameter("fone"));
-			 * System.out.println(request.getParameter("email"));
-			 **/
+
+		}
+
+		else if (action.equals("/select")) {
+			listarContato(request, response);
+
 		}
 	}
 
@@ -49,16 +49,16 @@ public class Controller extends HttpServlet {
 		request.setAttribute("contatos", lista);
 		RequestDispatcher rd = request.getRequestDispatcher("agenda.jsp");
 		rd.forward(request, response);
-		
-		/** teste de recebimento da lista
-		for (int i = 0; i < lista.size(); i++) {
-			System.out.println(lista.get(i).getIdcon());
-			System.out.println(lista.get(i).getNome());
-			System.out.println(lista.get(i).getFone());
-			System.out.println(lista.get(i).getEmail()); 
-			
-			**/
-		}
+
+		/**
+		 * teste de recebimento da lista for (int i = 0; i < lista.size(); i++) {
+		 * System.out.println(lista.get(i).getIdcon());
+		 * System.out.println(lista.get(i).getNome());
+		 * System.out.println(lista.get(i).getFone());
+		 * System.out.println(lista.get(i).getEmail());
+		 * 
+		 **/
+	}
 
 	// Novo contato
 
@@ -73,5 +73,25 @@ public class Controller extends HttpServlet {
 		// redirecionar para o documento agenda.jsp
 		response.sendRedirect("main");
 
+	}
+
+	// Editar contato
+	protected void listarContato(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// Recebimento do id do contato que será editado
+		String idcon = request.getParameter("idcon");
+		// Setar a variavel JavaBeans
+		contato.setIdcon(idcon);
+		// Executar o metodo selecionar contato
+		dao.selecionarContato(contato);
+		// Setar os atributos do formulario com o conteudo JavaBeans
+		request.setAttribute("idcon", contato.getIdcon());
+		request.setAttribute("nome", contato.getNome());
+		request.setAttribute("fone", contato.getFone());
+		request.setAttribute("email", contato.getEmail());
+		// Encaminhar ao documento editar.jsp
+		RequestDispatcher rd = request.getRequestDispatcher("editar.jsp");
+		rd.forward(request, response);
+		
 	}
 }

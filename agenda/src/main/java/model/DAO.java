@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+
 public class DAO {
 	/** Módulo de conexão **/
 	// Parâmetros de conexão
@@ -87,6 +88,28 @@ public class DAO {
 		} catch (Exception e) {
 			System.out.println(e);
 			return null;
+		}
+	}
+	
+	/** CRUD UPDATE **/
+	//selecionar contato
+	public void selecionarContato(JavaBeans contato) {
+		String read2 = "SELECT * FROM contatos WHERE idcon = ?";
+		try {
+			Connection con = conectar();
+			PreparedStatement pst = con.prepareStatement(read2);
+			pst.setString(1, contato.getIdcon());
+			ResultSet rs = pst.executeQuery();
+			while (rs.next()) {
+				//Setar as variaveis JavaBeans
+				contato.setIdcon(rs.getString(1));
+				contato.setNome(rs.getString(2));
+				contato.setFone(rs.getString(3));
+				contato.setEmail(rs.getString(4));
+			}
+			con.close();
+		} catch (Exception e) {
+			System.out.println(e);
 		}
 	}
 
