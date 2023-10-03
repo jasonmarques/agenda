@@ -1,6 +1,6 @@
 <h1 align="center"> Agenda de Contatos </h1>
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE)  
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/jasonmarques/agenda/blob/master/LICENSE)  
 
 ## Sobre o Projeto
 
