@@ -6,17 +6,16 @@
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
-O projeto em andamento consiste no desenvolvimento de uma Agenda de Contatos, com o objetivo de praticar a programação em Java EE e aplicar os conceitos do paradigma de orientação a objetos. Além disso, o projeto envolve a utilização CRUD em Java com JDBC.
+O projeto em andamento consiste no desenvolvimento de uma Agenda de Contatos, com o objetivo de praticar a programação em Java WEB.
 
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
 - ``Paradigma de orientação a objetos``
-- ``CRUD``
-- ``Padrão MVC``
-- ``Java 8``
+- ``Java EE (Servlet, jsp, JDBC)``
 - ``apache-tomcat-8.5.93``
-- ``Servlet, jsp, JDBC``
+- ``Padrão MVC``
+- ``CRUD``
 - ``MySQL``
 - ``Eclise IDE``
 
