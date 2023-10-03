@@ -1,6 +1,7 @@
 /**
  * Confirmar a exclusao de um contato
  * 
+ * @author Jason Marques
  * @param idcon
  */
 

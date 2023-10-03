@@ -1,3 +1,10 @@
+/** 
+* Validar campos obrigatórios
+*
+* @author Jason Marques
+*/
+
+
 function validar() {
 	let nome = frmContato.nome.value
 	let fone = frmContato.fone.value
