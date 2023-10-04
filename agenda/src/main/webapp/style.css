@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* Fonte do Google Fonts */
 @import
 	url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap')
 	;
@@ -11,66 +12,88 @@ body {
 }
 
 h1 {
-	color: #66bbff;
+	color: #008080;
+	font-size: 2em;
+	margin-bottom: 20px;
+	text-align: center;
+	margin-top: 20px;
+	border: 2px solid #008080;
+	padding: 10px;
+
+}
+
+.Botao1, .Botao2 {
+	text-decoration: none;
+	padding: 5px 10px;
+	font-size: 1.2em;
+	font-weight: 700;
+	border-radius: 5px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.Botao3 {
+	text-decoration: none;
+	padding: 3px 20px;
+	font-size: 1.2em;
+	font-weight: 700;
+	border-radius: 5px;
+	cursor: pointer;
+	display: inline-block;
 }
 
 .Botao1 {
-	text-decoration: none;
-	background-color: #66bbff;
-	padding: 5px 10px 5px 10px;
+	background-color: #008080;
 	color: #fff;
-	font-size: 1.2em;
-	font-weight: 700;
-	border-radius: 5px;
-	border: 0;
-	cursor: pointer;
+	margin-right: 10px;
 }
 
 .Botao2 {
-	text-decoration: none;
 	background-color: #d51213;
-	padding: 5px 10px 5px 10px;
 	color: #fff;
-	font-size: 1.2em;
-	font-weight: 700;
-	border-radius: 5px;
 }
 
-.Caixa1 {
-	width: 320px;
-	padding: 5px;
-	margin-bottom: 10px;
-	border: 1px solid #66bbff;
-	border-radius: 5px;
+.Botao3 {
+	text-align: center;
+	background-color: #d51213;
+	color: #fff;
+	margin-right: 10px;
 }
 
-.Caixa2 {
+.Caixa1, .Caixa2, #caixa3 {
 	padding: 5px;
-	margin-bottom: 10px;
-	border: 1px solid #66bbff;
-	border-radius: 5px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	border: 1px solid #008080;
+	max-width: 320px;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 #caixa3 {
+	text-align: center;
 	padding: 5px;
-	margin-bottom: 10px;
-	border: 1px solid #ff0000;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	border: 1px solid #008080;
+	max-width: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 #tabela {
 	margin-top: 30px;
 	border-collapse: collapse;
+	width: 100%;
+}
+
+#tabela th, #tabela td {
+	padding: 10px;
+	border: 1px solid #ddd;
+	text-align: left;
 }
 
 #tabela th {
-	border: 1px solid #ddd;
-	padding: 10px;
-	text-align: left;
-	background-color: #66bbff;
+	background-color: #008080;
 	color: #fff;
-}
-
-#tabela td {
-	border: 1px solid #ddd;
-	padding: 10px;
 }
